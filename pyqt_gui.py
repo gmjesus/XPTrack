@@ -12,17 +12,17 @@ class Page(QMainWindow):
     '''Parent class of all pages.'''
 
     def __init__(self):
-        #Constructor
+        # Constructor
         super().__init__()
    
     def defaultWindow(self,pageName):
-        #Default settings for each page
+        # Default settings for each page
         self.setWindowTitle(pageName)
         self.setStyleSheet("background-color: lightskyblue")
         self.resize(1000,900)
 
     def defaultButton(self,msg,x,y,fontsize,tooltip,w,h):
-        #Display a button
+        # Display a button
         pushButton = QPushButton(msg,self)
         pushButton.move(x,y)
         pushButton.setStyleSheet("background-color: white; font-size: "+str(fontsize)+"px")
@@ -37,7 +37,7 @@ class Page(QMainWindow):
         return label
  
     def backButton(self):
-        #Button to navigate to your last page
+        # Button to navigate to your last page
         pushButton = QPushButton("Back",self)
         pushButton.move(0,0)
         pushButton.setStyleSheet("background-color: white")
@@ -45,7 +45,7 @@ class Page(QMainWindow):
         pushButton.clicked.connect(self.lastWindow)
  
     def errorMessage(self,msg):
-        #Display error message
+        # Display error message
         error = QMessageBox()
         error.setIcon(QMessageBox.Critical)
         error.setText("Error:")
