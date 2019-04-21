@@ -442,6 +442,7 @@ class IntroPage(Page):
         self.w = RegisterPage()
         self.w.show()
         self.hide()
+
 #---------------------------------------------------
 # Main Code
 #---------------------------------------------------
